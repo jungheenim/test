@@ -1,0 +1,59 @@
+/*사이드바 구현*/
+#content .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+overflow: hidden;
+
+}
+#content .main-body {
+    max-width: 860px;
+    overflow: hidden;
+    width: 69%;
+    margin: 0 auto;
+    float: left;
+ overflow: hidden;
+
+}
+
+#aside {
+    margin-top: 100px;
+    width: 31%;
+   float: right;
+    padding-top: 30px;
+    height: auto;
+    box-sizing: border-box;
+
+/*    border-top: 1px solid #e6e6e6; */
+}
+#aside .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+
+}
+#aside h2 {
+    margin-bottom: 7px;
+    padding-bottom: 10px;
+    left: 5px;
+    font-size:1em;
+    color: #b0d197;
+  border-bottom: 1.5px solid #b0d197;
+}
+#aside .sidebar-1 {
+    width: 85%;
+    min-height: 10px;
+    box-sizing: border-box;
+    float: right;
+}
+#aside .sidebar-2 {
+    width: 85%;
+  min-height: 10px;
+  box-sizing: border-box;
+  float: right;
+}
+#aside .sidebar-3 {
+    width: 85%;
+    min-height: 10px;
+  box-sizing: border-box;
+  float: right;
+}

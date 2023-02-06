@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=cb9621e41d1f">
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=5e02cf10d2fb">
+    <link rel="stylesheet" type="text/css" href="../assets/css/sidebar.css">
+
+
+    <style type="text/css">
+      div#s_left {
+        width:200px;
+        height:700px;
+        float:left;
+      }
+      #contents {
+        width:400px;
+        height:700px;
+        float:left;
+      }
+      #s_right {
+        width:200px;
+        height:700px;
+        float:left;
+      }
+    </style>
+
+  </head>
+  <body>
+    <main>
+    </main>
+
+    <!--sidebar-->
+    <pre>
+      <code>
+        var canvas;
+
+        function setup() {
+          // put drawing code here
+          canvas = createCanvas(windowWidth, windowHeight);
+          background(random(255), random(255), random(255), 50);
+
+          button = createButton("Image Speichern");
+          button.mousePressed(saveImage)
+          button.position(windowWidth - 180, windowHeight - 50)
+        }
+
+        function draw() {
+          // put drawing code here
+          frameRate(2)
+          noStroke();
+          fill(random(255), random(255), random(255), 70);
+          ellipse(random(windowWidth), random(windowHeight), random(10, 300), random(10, 300));
+        }
+
+        function saveImage() {
+         saveCanvas('RandomKreis', 'jpg');
+        }
+      </code>
+    </pre>
+
+
+    <div>
+          <form name="reqform" method="post" action="uploadtest.php" enctype="multipart/form-data">
+           <input type="file" name="imgFile" />
+           <input type="submit" value="Hochladen" />
+          </form>
+    </div>
+
+    <div>
+      <script src="../assets/js/experiment/randomkreis.js"></script>
+    </div>
+
+
+  </body>
+</html>

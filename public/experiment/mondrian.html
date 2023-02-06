@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Scripts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+      <script src="assets/js/p5.js"></script>
+      <script src="assets/js/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+    </main>
+    <script>
+
+      var canvas;
+      var col = Math.random();
+      var con = Math.random() * 20;
+      let i = Math.floor(Math.random() * 100) + 1;
+      let xposition;
+      let yposition;
+
+      function setup() {
+        // put drawing code here
+        canvas = createCanvas(windowWidth, windowHeight);
+        background(250);
+      }
+
+      function randomxy() {
+        let randomx = [];
+        let randomy = [];
+
+        for (var j = 0; j < i; j++) {
+          let x = random(con/2, windowWidth - (con/2));
+          let y = random(con/2, windowHeight - (con/2));
+          randomx.push(x);
+          randomy.push(y);
+        }
+        return randomx, randomy;
+      }
+      randomxy();
+
+      function draw() {
+        // put drawing code here
+        xposition = random(con/2, windowWidth - (con/2));
+        yposition = random(con/2, windowHeight - (con/2));
+        strokeWeight(con);
+
+          var n = random(0, 1);
+          if (n < 0.5) {
+            line(xposition, 0, xposition, windowHeight);
+          } else {
+            line(0, yposition, windowWidth, yposition);
+          }
+
+        noStroke();
+        if (col < 0.2) { fill('yellow'); }
+        else if (0.2 <= col < 0.4) { fill('red'); }
+        else if (0.4 <= col < 0.6 ) { fill('white'); }
+        else if (0.6 <= col < 0.8) { fill('blue'); }
+        else { noFill(); }
+
+        rect(50, 50, 50, 50);
+      }
+
+    </script>
+  </body>
+</html>
