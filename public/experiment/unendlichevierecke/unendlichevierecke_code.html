@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      pre{
+        font-size:20px;
+        padding:100px;
+        white-space:pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+
+
+    <!--button-->
+    <button type="button" class="tablink" onclick="location.href='unendlichevierecke_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='unendlichevierecke_sketch.html'">Sketch</button>
+
+    <p>
+      <pre>
+        let slider;
+        var canvas;
+        let pointx;
+        let pointy;
+        let range;
+        let button;
+
+        function setup() {
+          // put drawing code here
+          canvas = createCanvas(windowWidth, windowHeight);
+          canvas.position(0, 0);
+          canvas.style('z-index', '-1');
+          background(random(255), random(255), random(255), 50);
+
+          button = createButton("Image Speichern");
+          button.mousePressed(saveImage)
+          button.position(windowWidth - 180, windowHeight - 50)
+
+          sizeSlider = createSlider(10, 500, 100, 10);
+          sizeSlider.position(windowWidth - 180, windowHeight - 120);
+          sizeSlider.style('width', '150px');
+          speedSlider = createSlider(0.1, 10, 1, 0.1);
+          speedSlider.position(windowWidth - 180, windowHeight - 90);
+          speedSlider.style('width', '150px');
+
+        }
+
+        function draw() {
+          // put drawing code here
+          fill(0);
+          let speed = speedSlider.value();
+          let range = sizeSlider.value();
+          frameRate(speed);
+          noStroke();
+          fill(random(255), random(255), random(255));
+          pointx = random(windowWidth);
+          pointy = random(windowHeight);
+          quad(pointx, pointy, random(pointx - range, pointx + range), random(pointy - range, pointy + range), random(pointx - range, pointx + range), random(pointy - range, pointy + range), random(pointx - range, pointx + range), random(pointy - range, pointy + range));
+        }
+
+        function saveImage() {
+         saveCanvas('FriederNake', 'jpg');
+        }
+      </pre>
+    </p>
+    <!--
+    <script src="../assets/js/experiment/unendlichevierecke.js"></script>
+    -->
+
+  </body>
+</html>
