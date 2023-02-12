@@ -3,7 +3,10 @@ var cols = 12;
 var rectsize = 30;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
+
   background(255);
 
   button = createButton("Image Speichern");

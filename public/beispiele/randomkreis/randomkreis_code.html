@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <meta charset="utf-8" />
+    <style>
+      pre{
+        font-size:20px;
+        padding:100px;
+        white-space:pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <!--button-->
+    <button type="button" class="tablink" onclick="location.href='randomkreis_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='randomkreis_sketch.html'">Sketch</button>
+
+    <p>
+      <pre>
+        var canvas;
+
+        function setup() {
+          // put drawing code here
+          canvas = createCanvas(windowWidth, windowHeight);
+          background(random(255), random(255), random(255), 50);
+
+          button = createButton("Image Speichern");
+          button.mousePressed(saveImage)
+          button.position(windowWidth - 180, windowHeight - 50)
+        }
+
+        function draw() {
+          // put drawing code here
+          frameRate(2)
+          noStroke();
+          fill(random(255), random(255), random(255), 70);
+          ellipse(random(windowWidth), random(windowHeight), random(10, 300), random(10, 300));
+        }
+
+        function saveImage() {
+         saveCanvas('RandomKreis', 'jpg');
+        }
+      </pre>
+    </p>
+
+  </body>
+</html>

@@ -8,7 +8,10 @@ var brLenRatio = 0.67; //Size of child branch relative to parent
 var canvasSize = 600;
 
 function setup() {
-  createCanvas(canvasSize, canvasSize);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
+  //createCanvas(canvasSize, canvasSize);
   slider = createSlider(0, TWO_PI, QUARTER_PI, scrub);
 
   button = createButton("Image Speichern");
