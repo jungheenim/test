@@ -13,8 +13,15 @@
 
 		<script language="javascript" type="text/javascript" src="js/p5.js"></script>
 		<script language="javascript" type="text/javascript" src="js/sketch_createcanvas.js"></script>
-		<style> body {padding: 0;
+		<style>
+		body {
+			padding: 0;
 			margin: 0;
+		}
+		.code {
+			font-size:20px;
+			margin:0;
+			padding:0px;
 		}
 		</style>
 
@@ -52,15 +59,26 @@
 
 										<h2>Create Canvas</h2>
 
-										<p>Das Werk oder Produkt entsteht durch das Abarbeiten einer prozessualen Erfindung, das heißt, eines vom Künstler geschaffenen Regelsatzes bzw. eines Programmes, das beispielsweise in Form natürlicher Sprache, musikalischer Sprache, eines binären Codes, oder eines Mechanismus festgehalten wird.
-
-											Das Abarbeiten geschieht selbstorganisierend, in Form eines relativ autonomen Prozesses, etwa durch Handlungen, die – wie in der Partitur zu einem Happening – nach vorliegenden Anweisungen vorgenommen werden, durch ein Computerprogramm, das Anweisungen, Bildinformationen oder andere Konzepte abarbeitet, oder durch andere Medien und Hilfsmittel. Unter unterschiedlichen Produktionsbedingungen läuft der Prozess jeweils anders ab. Das Ergebnis bewegt sich in mehr oder weniger gegebenen Grenzen, ist darin jedoch unvorhersehbar.
-
-											Generative Kunst dient Künstlern oft als Mittel, Intentionalität zu vermeiden. <i>(wikipedia)</i></p>
-
+										<p>createCanvas() kreiert Canvas. Diese Funktion muss in setup() Funktion nur einmal ausführen.<i></i></p>
 
 											<h3> Beispiel </h3>
-											<div>Create Canvas</div>
+											<!--
+											<section>
+												<pre class="code">
+													function setup() {
+														createCanvas(400, 200);
+													};
+
+													function draw() {
+														background(200);
+														fill(255);
+														rect(x,y,50,50);
+													};
+												</pre>
+											</section>
+										-->
+
+											<div>createCanvas()</div>
 											<div id="createcanvas"></div> <br>
 
 

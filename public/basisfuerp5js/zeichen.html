@@ -6,13 +6,28 @@
 -->
 <html>
 	<head>
-		<title>Generativen Kunst</title>
+		<title>2022 WS Projektseminar. Generative Kunst.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
+		<script language="javascript" type="text/javascript" src="js/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="js/sketch_zeichen.js"></script>
+		<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.code {
+			font-size:20px;
+			margin:0;
+			padding:0px;
+		}
+		</style>
+
+	</head>
+
+	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -32,35 +47,89 @@
 									</ul>
 								</header>
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Generative Kunst</h1>
-									</header>
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Basis für p5.js</h1>
+											<h2></h2>
+												<p>
+												</p>
+										</header>
 
-									<!--<span class="image main"><img src="images/pic11.jpg" alt="" /></span>-->
-									<p>Generative Kunst ist eine Art der Kunst, die nach einer bestimmten Regel, Formel oder Code generiert wird.
-										Dieses Prinzip gilt nicht nur in der digitalen Kunst, sondern auch in der Biologie und Chemie usw..
-										Als das Projektthema ausgewählt ist die generative Kunst, weil sie vom Nutzer nach eigener Eingabe und Zufall als verschiedenen Formen entwickeln kann.
-										Dadurch kann man einfach zur Kunst näherkommen.
-										Diese Art von Kunst wird mit p5.js generiert.
-										p5.js ist eine offene Library mit der Computersprache Javascript.</p>
-									<p>Das Werk oder Produkt entsteht durch das Abarbeiten einer prozessualen Erfindung, das heißt, eines vom Künstler geschaffenen Regelsatzes bzw. eines Programmes, das beispielsweise in Form natürlicher Sprache, musikalischer Sprache, eines binären Codes, oder eines Mechanismus festgehalten wird.</p>
-									<p>Das Abarbeiten geschieht selbstorganisierend, in Form eines relativ autonomen Prozesses, etwa durch Handlungen, die – wie in der Partitur zu einem Happening – nach vorliegenden Anweisungen vorgenommen werden, durch ein Computerprogramm, das Anweisungen, Bildinformationen oder andere Konzepte abarbeitet, oder durch andere Medien und Hilfsmittel. Unter unterschiedlichen Produktionsbedingungen läuft der Prozess jeweils anders ab. Das Ergebnis bewegt sich in mehr oder weniger gegebenen Grenzen, ist darin jedoch unvorhersehbar.</p>
-									<p>Generative Kunst dient Künstlern oft als Mittel, Intentionalität zu vermeiden.</p>
-									<hr class="major" />
+										<h2>Zeichen</h2>
 
-									<h2>Geschichte der generativen Kunst</h2>
-									<p>...</p>
-									<hr class="major" />
+										<p>Mit p5.js können verschiedene Zeichen dargestellt werden.
+											Da gibt arc(), ellipse(), circle(), line(), point(), quad(), rect(), square(), triangle() Funktionen. <i></i></p>
 
-									<h2>Künstler'innen</h2>
-									<p>...</p>
-									<hr class="major" />
+											<h3> Beispiel </h3>
+											<!--
+											<section>
+												<pre class="code">
+													function setup() {
+														createCanvas(400, 200);
+													};
+
+													function draw() {
+														background(200);
+														fill(255);
+														rect(x,y,50,50);
+													};
+												</pre>
+											</section>
+										-->
+
+											<div>arc()</div>
+											<div id="arc"></div> <br>
+
+											<div>ellipse()</div>
+											<div id="ellipse"></div> <br>
+
+											<div>circle()</div>
+											<div id="circle"></div> <br>
+
+											<div>line()</div>
+											<div id="line"></div> <br>
+
+											<div>point()</div>
+											<div id="point"></div> <br>
+
+											<div>quad()</div>
+											<div id="quad"></div> <br>
+
+											<div>rect()</div>
+											<div id="rect"></div> <br>
+
+											<div>square()</div>
+											<div id="square"></div> <br>
+
+											<div>triangle()</div>
+											<div id="triangle"></div> <br>
 
 
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
 								</section>
 
+								<!--Thumbnails-->
+								<!--
+								<section>
+									<header class="major">
+										<h2>Teile dein Werk:)</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+								-->
 						</div>
 					</div>
 
@@ -130,39 +199,18 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Medienwissenschaft Student <div id="huberlin">an der Humboldt Universität zu Berlin</div></h2>
 									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+									<p></p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">junghee.yoon@hu-berlin.de</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">Georgenstr. 47, 10117 Berlin, DE</li>
 									</ul>
 								</section>
 
-							<!-- Section -->
 								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
+									<a href="assets/download/protokol.docx" download="protokol">protokol.docx</a>
 								</section>
 
 							<!-- Footer -->
@@ -175,12 +223,17 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+			<!-- Scripts -->
+				<script src="../assets/js/jquery.min.js"></script>
+				<script src="../assets/js/browser.min.js"></script>
+				<script src="../assets/js/breakpoints.min.js"></script>
+				<script src="../assets/js/util.js"></script>
+				<script src="../assets/js/main.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+				<script src="../assets/js/p5.js"></script>
+				<script src="../assets/js/p5.min.js"></script>
+				<script src="../assets/js/index/background.js"></script>
 
 	</body>
 </html>
