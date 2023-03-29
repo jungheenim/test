@@ -3,6 +3,11 @@ let quad1, quad2, quad3, quad4, quad5, quad6, quad7, quad8, quad9, quad10, quad1
 let col = ['red', 'green', 'blue', 'purple', 'white', 'yellow'];
 
 function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 100);
+  canvas.style('z-index', '-1');
+
+
   createCanvas(250, 370);
   background(0);
   ra = 30;

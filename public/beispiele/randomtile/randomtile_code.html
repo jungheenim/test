@@ -19,8 +19,8 @@
 
 
     <!--button-->
-    <button type="button" class="tablink" onclick="location.href='randomgrid_code.html'" id="defaultOpen">Code</button>
-    <button type="button" class="tablink" onclick="location.href='randomgrid_sketch.html'">Sketch</button>
+    <button type="button" class="tablink" onclick="location.href='randomtile_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='randomtile_sketch.html'">Sketch</button>
 
     <p>
       <pre>
@@ -29,6 +29,11 @@
         let col = ['red', 'green', 'blue', 'purple', 'white', 'yellow'];
         
         function setup() {
+          canvas = createCanvas(windowWidth, windowHeight);
+          canvas.position(0, 100);
+          canvas.style('z-index', '-1');
+        
+        
           createCanvas(250, 370);
           background(0);
           ra = 30;
