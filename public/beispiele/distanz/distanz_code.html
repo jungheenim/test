@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <meta charset="utf-8" />
+    <style>
+      pre{
+        font-size:20px;
+        padding:100px;
+        white-space:pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <!--button-->
+    <button type="button" class="tablink" onclick="location.href='distanz_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='distanz_sketch.html'">Sketch</button>
+
+    <p>
+      <pre>
+        function setup() {
+          createCanvas(500, 500);
+          background(0);
+        }
+        
+        function draw() {
+          background(0);
+          let d = dist(width/2, height/2, mouseX, mouseY);
+          stroke(255);
+          strokeWeight(5);
+          point(width/2, height/2);
+          strokeWeight(1);
+          fill(255);
+          textSize(29);
+          text(d, mouseX, mouseY);
+          point(mouseX, mouseY);
+          line(width/2, height/2, mouseX, mouseY);
+        }
+      </pre>
+    </p>
+
+  </body>
+</html>

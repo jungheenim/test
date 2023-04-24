@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <meta charset="utf-8" />
+    <style>
+      pre{
+        font-size:20px;
+        padding:100px;
+        white-space:pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <!--button-->
+    <button type="button" class="tablink" onclick="location.href='ballcontroll_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='ballcontroll_sketch.html'">Sketch</button>
+
+    <p>
+      <pre>
+        let x = 15.0, y = 15.0, velocity_y = 3.0;
+        let slider;
+        function setup() {
+          createCanvas(500, 500);
+          background(0);
+          slider_x = createSlider(-10, 10, 1, 1);
+          slider_x.position(10, 10);
+          slider_x.style('width', '80px');
+          slider_y = createSlider(-10, 10, 1, 1);
+          slider_y.position(200, 10);
+          slider_y.style('width', '80px');
+        }
+        
+        function draw() {
+          let val_x = slider_x.value();
+          let val_y = slider_y.value();
+        
+          ellipse(x, y, 30, 30);
+          x += val_x;
+          y += val_y;
+         
+          x = constrain(x, 0, width);
+          y = constrain(y, 0, height);
+        }
+      </pre>
+    </p>
+
+  </body>
+</html>

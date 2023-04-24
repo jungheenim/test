@@ -1,9 +1,10 @@
 let ra, di;
 let quad1, quad2, quad3, quad4, quad5, quad6, quad7, quad8, quad9, quad10, quad11, quad12, quad13, quad14, quad15;
+
+
 let cols = ['red', 'green', 'blue', 'purple', 'white', 'yellow'];
 let redcount, greencount, bluecount, purplecount, whitecount, yellowcount = [];
 let li = [];
-
 
 function randomColor() {
     for (i = 0; i < 15; i++) {
@@ -36,19 +37,22 @@ function randomColor() {
             i--;
         }
     }
-
 }
+
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 100);
     canvas.style('z-index', '-1');
 
-
     createCanvas(250, 370);
     background(200, 255, 200, 150);
     ra = 30;
     di = 30;
+
+    button = createButton("Image Speichern");
+    button.mousePressed(saveImage)
+    button.position(windowWidth - 180, windowHeight - 50)
 }
 
 function draw() {
@@ -56,7 +60,6 @@ function draw() {
     strokeWeight(1);
 
     randomColor();
-
 
     fill(li[0]);
     quad1 = quad(ra + di, ra, ra + 2 * di, ra + di, ra + di, ra + 2 * di, ra, ra + di);
@@ -90,7 +93,10 @@ function draw() {
     quad15 = quad(ra + 5 * di, ra + 8 * di, ra + 6 * di, ra + 9 * di, ra + 5 * di, ra + 10 * di, ra + 4 * di, ra + 9 * di);
     noFill();
     rect(ra, ra, 6 * di, 10 * di);
-
     noLoop();
-
 }
+
+function saveImage() {
+    saveCanvas('RandomKreis', 'jpg');
+   }
+   

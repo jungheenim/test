@@ -12,10 +12,6 @@ function setup() {
   canvas.style('z-index', '-1');
   background(random(255), random(255), random(255), 50);
 
-  button = createButton("Image Speichern");
-  button.mousePressed(saveImage)
-  button.position(windowWidth - 180, windowHeight - 50)
-
   //textSize(16);
   sizeSlider = createSlider(10, 500, 100, 10);
   sizeSlider.position(windowWidth - 180, windowHeight - 120);
@@ -24,6 +20,9 @@ function setup() {
   speedSlider.position(windowWidth - 180, windowHeight - 90);
   speedSlider.style('width', '150px');
 
+  button = createButton("Image Speichern");
+  button.mousePressed(saveImage)
+  button.position(windowWidth - 180, windowHeight - 50)
 }
 
 function draw() {
@@ -42,5 +41,5 @@ function draw() {
 }
 
 function saveImage() {
- saveCanvas('FriederNake', 'jpg');
+ saveCanvas('UnendlicheVierecke', 'jpg');
 }

@@ -12,6 +12,10 @@ function setup() {
   background(255, 255, 255);
 
   lineweight = random(20);
+
+  button = createButton("Image Speichern");
+  button.mousePressed(saveImage)
+  button.position(windowWidth - 180, windowHeight - 50)
 }
 
 function draw() {

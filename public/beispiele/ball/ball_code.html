@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <meta charset="utf-8" />
+    <style>
+      pre{
+        font-size:20px;
+        padding:100px;
+        white-space:pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    </main>
+    <!--button-->
+    <button type="button" class="tablink" onclick="location.href='ball_code.html'" id="defaultOpen">Code</button>
+    <button type="button" class="tablink" onclick="location.href='ball_sketch.html'">Sketch</button>
+
+    <p>
+      <pre>
+        let x = 15.0, y = 15.0, velocity_x = 4.0, velocity_y = 3.0
+        ;
+        function setup() {
+          createCanvas(500, 500);
+        }
+        
+        function draw() {
+          background(0);
+          ellipse(x, y, 30, 30);
+          x += velocity_x;
+          y += velocity_y;
+          if(x < 15|| x > width-15) {
+            velocity_x *= -1;
+          }
+          if(y < 15|| y > height-15) {
+            velocity_y *= -1;
+          }
+        }
+      </pre>
+    </p>
+
+  </body>
+</html>
