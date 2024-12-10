@@ -22,9 +22,9 @@
 // }
 
 var canvas;
-let a;
-let b;
-let c;
+let a, b, c;
+
+let mic;
 
 function setup() {
   // put drawing code here
@@ -34,6 +34,8 @@ function setup() {
   a = random(255);
   b = random(255);
   c = random(255);
+
+  mic = new p5.AudioIn();
 }
 
 function draw() {
